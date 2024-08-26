@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area{
+            font: normal 15pt arial;
+            background:darkgreen;
+            color:white;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <div id= 'area'>
+        interaja
+    </div> 
+    <script>
+         var a  = window.document.getElementById('area')
+// A LIGAÇÃO ENTRE O HTML  E O JS É FEITA POR ESSAS 3 LINHAS A SEGUIR//
+         a.addEventListener('click', clicar) 
+         a.addEventListener('mouseenter', entrar)
+         a.addEventListener('mouseout', sair)
+//----------------------------------------------------//
+
+         function clicar (){
+                a.innerText = 'clicou!'
+           a. style.background = "red"}
+        function entrar() {
+            a.innerText = 'entrou !'
+            a.style.background = 'blue'
+        }
+        function sair () {
+            a. innerText =' saiu!'
+            a. style.background = "green"
+        }
+    </script>
+    
+</body>
+</html>
